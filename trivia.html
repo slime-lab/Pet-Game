@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Magical Cat Button</title>
+</head>
+
+<body>
+    <button id="cat-button">magical cat button</button>
+    <div id="body">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // Event listener for our cat-button
+        $("#cat-button").on("click", function () {
+
+            // Storing our giphy API URL for a random cat image
+            var queryURL = "https://opentdb.com/api.php?amount=1&category=9&difficulty=medium&type=boolean";
+
+            // Perfoming an AJAX GET request to our queryURL
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            })
+
+                // After the data from the AJAX request comes back
+                .then(function (response) {
+                    // console.log(response)
+                    for (var i = 0; i < response.results.length; i++) {
+                        console.log(response);
+
+                        // // Saving the image_original_url property
+                        var questionUrl = response.results[i].question;
+                        var correct = response.results[i].correct_answer;
+                        var incorrect = response.results[i].incorrect_answers;
+                        console.log(incorrect);
+                        console.log(correct);
+                        // console.log(questionUrl)
+                        $("#body").append(questionUrl)
+                        // // Creating and storing an image tag
+                        var quizquestion = $("<div>");
+                        var truebtn = $("<button>").attr("val", "true").text("True");
+                        var falsebtn = $("<button>").attr("val", "false").text("False");
+                                $("#body").append("<br><br>");
+                                $("#body").append(truebtn);
+                                $("#body").append(falsebtn);
+
+                        // // Setting the catImage src attribute to imageUrl
+                        quizquestion.attr("<p>", questionUrl);
+                        // catImage.attr("alt", "cat image");
+
+                        // // Prepending the catImage to the images div
+                        $("#body").html(quizquestion);
+                    };
+                });
+        });
+    </script>
+</body>
+
+</html>
