@@ -11,20 +11,20 @@
 
 
 <body>
- <!-- ################ Modal stuff ##################### -->
- 
-    <!-- <div class="modal">
+    <!-- ################ Modal stuff ##################### -->
+
+    <div class="modal">
         <div class="quizBox">
             <div class="exit">
                 <div class="x">x</div>
             </div>
             <div class="questions">1. Some sample text for a question.</div>
         </div>
-    </div> -->
+    </div>
 
     <div class="container">
         <div class="header">
-<!-- header -->
+            <!-- header -->
             <div class="">Header</div>
             <!-- end of header -->
         </div>
@@ -32,16 +32,16 @@
         <div class="content">
             <!-- menu -->
             <!-- pet -->
-             <div class="boxOne box">pet</div>
-             <!-- feed -->
-            <div class="boxTwo box">feed</div>
+            <div class="boxOne box"></div>
+            <!-- feed -->
+            <div class="boxTwo box"></div>
             <!-- game -->
-            <div class="boxThree box">game</div>
+            <div class="boxThree box"></div>
             <!-- display and pet area -->
             <div class="boxFour box">
-                <div class="displaySun">Sun</div>
-                <div class="displayClouds">Cloud</div>
-                <div class="displayMoon">Moon</div>
+                <div class="displaySun"><img class="displaySunImg"></div>
+                <div class="displayClouds"><img class="displayCloudsImg"></div>
+                <div class="displayMoon"><img class="displayMoonImg"></div>
                 <div class="displayPet">Pet</div>
             </div>
         </div>
@@ -50,6 +50,15 @@
         <!-- footer -->
         <div class="footer">This is a footer</div>
         <!-- end of footer -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/weather.js"></script>
+        <script src="assets/modal.js"></script>
+        <script type="text/javascript">
+        weather();
+        setInterval(weather(),  1000 * 60 * 60);
+        test();
+            // This is our API key. Add your own API key between the ""
+        </script>
     </div>
 
 </body>
