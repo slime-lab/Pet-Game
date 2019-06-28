@@ -63,9 +63,32 @@ function weather() {
             $(".temp").append("<br><br>" + response.weather[0].main);
             $(".temp").append("<br><br>" + response.weather[0].description);
             $(".temp").append("<br><br>" + dayornight);
+            //this sets weather icon~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            if(currentWeather == "Rain"|| currentWeather== "Thunderstorm"||currentWeather== "Drizzle"||currentWeather== "Snow"){
+                //set rain icon
+                $(".weatherIcon").attr("src", "images/weather/rain.gif")
+            }
+            else if(currentWeather== "Clouds"||currentWeather== "Fog"||currentWeather== "Mist"){
+                //set clouds icon
+                $(".weatherIcon").attr("src", "images/weather/clouds.gif")
 
-            if(currentWeather == "rain"){
-                set
+            }
+            else{
+                if(dayornight == "day"){
+                    //set day icon
+                    $(".weatherIcon").attr("src", "images/weather/clear.gif")
+                }
+                else{
+                    //set night icon
+                    $(".weatherIcon").attr("src", "images/weather/clearnight.gif")
+                }
+            }
+            //this sets the background to be day or night
+            if(dayornight=="day"){
+                //set background to day
+            }
+            else{
+                //set background to night
             }
         });
         
