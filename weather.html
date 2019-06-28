@@ -9,19 +9,7 @@
     <title>Pet Game</title>
 </head>
 
-
 <body>
- <!-- ################ Modal stuff ##################### -->
- 
-    <!-- <div class="modal">
-        <div class="quizBox">
-            <div class="exit">
-                <div class="x">x</div>
-            </div>
-            <div class="questions">1. Some sample text for a question.</div>
-        </div>
-    </div> -->
-
     <div class="container">
         <div class="header">
 <!-- header -->
@@ -32,25 +20,35 @@
         <div class="content">
             <!-- menu -->
             <!-- pet -->
-             <div class="boxOne box">pet</div>
+             <div class="boxOne">pet</div>
              <!-- feed -->
-            <div class="boxTwo box">feed</div>
+            <div class="boxTwo">feed</div>
             <!-- game -->
-            <div class="boxThree box">game</div>
+            <div class="boxThree">game</div>
             <!-- display and pet area -->
-            <div class="boxFour box">
-                <div class="displaySun">Sun</div>
-                <div class="displayClouds">Cloud</div>
-                <div class="displayMoon">Moon</div>
-                <div class="displayPet">Pet</div>
+            <div class="boxFour">Display
+                <img src="" style="width: 25%" class="weatherIcon">
+
             </div>
         </div>
         <!-- end of body -->
 
         <!-- footer -->
-        <div class="footer">This is a footer</div>
+        <div class="footer">Footer</div>
         <!-- end of footer -->
     </div>
+
+    <div class="city"></div>
+    <div class="wind"></div>
+    <div class="humidity"></div>
+    <div class="temp"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="michael.js"></script>
+    <script type="text/javascript">
+    weather();
+        // This is our API key. Add your own API key between the ""
+    </script>
+    
 
 </body>
 
