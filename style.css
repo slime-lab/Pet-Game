@@ -60,8 +60,8 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px 200px 40px;
+    grid-template-columns: repeat(auto-fit, minmax(12, 1fr)); 
+    grid-template-rows: 40px auto 40px;
         grid-template-areas:
         "h h h h h h h h h h h h"
         "c c c c c c c c c c c c"
@@ -89,7 +89,8 @@
 }
 
 .content {
-    background-image: url(images/background/free-hand-drawn-vector-landscape-illustration.jpg);
+    background-image: url(images/background/free-hand-drawn-vector-landscape-illustration.jpg); 
+    background-size: 100%;
     grid-area: c;
     /* grid-column: 1 / -1; */
     background-color: palegoldenrod;
@@ -166,7 +167,7 @@
 .footer {
     grid-area: f;
     /* grid-column: 1 / -1; */
-    background-color: palevioletred;
+    background-color: transparent;
     align-content: end;
 }
 
