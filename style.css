@@ -110,8 +110,9 @@
 
 .box{
     background-color: rgba(0, 0, 0, 0.5);
-    
+
 }
+
 .boxOne {
     grid-area: a;
     background-image: url(images/icons/hand.svg);
@@ -176,7 +177,7 @@
 .displayClouds {
     grid-area: sm;
     background-color: transparent;
-}
+}s
 
 .displayMoon {
     grid-area: cld;
@@ -186,8 +187,18 @@
 .displayPet {
     grid-area: p;
     background-color: transparent;
+    background-image: url(images/avatar/idleAvatar.gif);
+    background-repeat: no-repeat;
+    background-size: 270px 250px;
+    background-position: center;
+
 }
 
+/* //display food */
+.displayFood {
+    background-color: red;
+    float: left;
+}
 
 .displaySunImg {
     width: 100px;
