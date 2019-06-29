@@ -5,45 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Pet Game</title>
 </head>
 
+
 <body>
+    <!-- ################ Modal stuff ##################### -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        //these are the variables created to set latitude and longitude
-        var lat = 0;
-        var lon = 0;
-        
-        //this is the function to pull the geo location and set it within the API URL
-        navigator.geolocation.getCurrentPosition(function (position) {
-            lat = position.coords.latitude;
-            lon = position.coords.longitude;
+    <div class="modal">
+        <div class="quizBox">
+            <div class="exit">
+                <div class="x">x</div>
+            </div>
+            <div class="questions">1. Some sample text for a question.</div>
+        </div>
+    </div>
 
-            console.log(lat);
-            console.log(lon);
+    <div class="container">
+        <div class="header">
+            <!-- header -->
+            <div class="">Header</div>
+            <!-- end of header -->
+        </div>
+        <!-- overall body -->
+        <div class="content">
+            <!-- menu -->
+            <!-- pet -->
+            <div class="boxOne box"></div>
+            <!-- feed -->
+            <div class="boxTwo box"></div>
+            <!-- game -->
+            <div class="boxThree box"></div>
+            <!-- display and pet area -->
+            <div class="boxFour box">
+                <div class="displaySun"><img class="displaySunImg"></div>
+                <div class="displayClouds"><img class="displayCloudsImg"></div>
+                <div class="displayMoon"><img class="displayMoonImg"></div>
+                <div class="displayPet">Pet</div>
+            </div>
+        </div>
+        <!-- end of body -->
 
-            var APIKey = "700d2b3940dbe3d3724d18c988a5683b";    //input your own custom API key here
-                    //below is our custom API url by geographical data, 
-                    //lat and lon is added in the geolocation that was pulled from the geo tag
-                    //set to '&units=imperial' for fahrenheit
-            var queryURL = 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=' + lat + '&lon=' + lon + '&units=imperial'+ '&appid=' + APIKey;
-
-            //we then create an AJAX call
-            $.ajax({
-                url: queryURL,
-                method: "GET"
-            }).then(function (response) {
-                // Log the queryURL
-                console.log(queryURL);
-                // Log the resulting object
-                console.log(response);
-            });
-
-        });
-
-    </script>
+        <!-- footer -->
+        <div class="footer">This is a footer</div>
+        <!-- end of footer -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/weather.js"></script>
+        <script src="assets/modal.js"></script>
+        <script type="text/javascript">
+        weather();
+        setInterval(weather(),  1000 * 60 * 60);
+        test();
+            // This is our API key. Add your own API key between the ""
+        </script>
+    </div>
 
 </body>
 
