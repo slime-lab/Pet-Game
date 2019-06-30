@@ -3,7 +3,7 @@ var points = 0;
 //quiz toggle
 var questionAnswered = false;
 // Event listener for our quiz-button
-$("#quiz-button").on("click", function () {
+$(".boxThree").on("click", function () {
     questionAnswered = false;
 
     // Storing our opentdb API URL for the quiz
@@ -23,14 +23,16 @@ $("#quiz-button").on("click", function () {
                 console.log(correct);
                 console.log(incorrect);
 
-                $("#body").html(questionUrl)
-                var quizquestion = $("<div>");
-                var truebtn = $("<button>").text("True");
-                var falsebtn = $("<button>").text("False");
+                $(".questions").html(questionUrl)
+                // var quizquestion = $("<div>");
+                // var truebtn = $("<button>").text("True");
+                // var falsebtn = $("<button>").text("False");
+                var truebtn = $(".truebtn");
+                var falsebtn = $(".falsebtn");
 
-                $("#body").append("<br><br>");
-                $("#body").append(truebtn);
-                $("#body").append(falsebtn);
+                // $(".quizBox").append("<br><br>");
+                // $(".quizBox").append(truebtn);
+                // $(".quizBox").append(falsebtn);
                 //swap to default pet face function
                 function defaultEmoji() {
                     $(".pet").attr("src", "images/testemoji/defaultemoji.png")
