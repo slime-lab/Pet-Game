@@ -187,17 +187,7 @@
 .displayPet {
     grid-area: p;
     background-color: transparent;
-    background-image: url(images/avatar/idleAvatar.gif);
-    background-repeat: no-repeat;
-    background-size: 270px 250px;
-    background-position: center;
-
-}
-
-/* //display food */
-.displayFood {
-    background-color: red;
-    float: left;
+    
 }
 
 .displaySunImg {
@@ -209,6 +199,11 @@
 }
 .displayMoonImg {
     width: 100px;
+}
+
+.displayPetImg {
+    width: 270px;
+    height: 270px;
 }
 
 
