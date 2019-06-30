@@ -12,7 +12,7 @@ $(".boxOne").click(function (happyPet) {
 
 });
 
-//feed button clicked -- food appears
+//feed button clicked
 //if button is clicked then default image change into happy image
 //after 4 hours with no click, change image back to default
 $(".boxTwo").click(function (hungryPet) {
@@ -22,24 +22,23 @@ $(".boxTwo").click(function (hungryPet) {
 
 });
 
+//if button hasnt been clicked for set number of hours, avatar becomes upset
+var isClicked = $('.boxOne').data('clicked');
+if (isClicked != 'yes') {
+    $(".displayPetImg").attr("src", "images/avatar/upsetAvatar.gif");
+} else (defaultMood);
+
 //detect if buttons are clicked
 $('.boxOne').on('click', function () {
     $(this).data('clicked', 'yes');
     console.log("i clicked it!");
 });
 
-//when you click on feed, the meat image shows up 
 $('.boxTwo').on('click', function () {
     $(this).data('clicked', 'yes');
     console.log("i clicked it!");
-    $(".displayFoodImg").attr("src", "images/food/meat.png");
-    setTimeout(defaultMood, 5000);
 
 });
 
-//if button hasnt been clicked for set number of hours, avatar becomes upset
-var isClicked = $('.boxOne').data('clicked');
-    if (isClicked != 'yes') {
-        $(".displayPetImg").attr("src", "images/avatar/upsetAvatar.gif");
-    } else (defaultMood);
+
 
