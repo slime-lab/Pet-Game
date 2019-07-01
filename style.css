@@ -428,3 +428,22 @@
 
 
 } 
+/* adding css for buttons */
+#feedButton{
+    height:200px;
+    width:200px;
+    margin: 0 auto;
+
+}
+#playButton{
+    height:200px;
+    width:200px;
+    margin: 0 auto;
+
+}
+#petButton{
+    height:200px;
+    width:200px;
+    margin: 0 auto;
+
+}
