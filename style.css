@@ -185,7 +185,7 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "cl sm cld"
-        "p p p"
+        "f p p"
          
 
 }
@@ -196,6 +196,11 @@
     grid-area: cl;
     background-color: transparent;
     justify-content: left;
+
+}
+
+.displayFood {
+    grid-area: f;
 
 }
 
@@ -213,6 +218,10 @@
     grid-area: p;
     background-color: transparent;
     
+}
+
+.displayFoodImg {
+    width: 150px;
 }
 
 .displaySunImg {
