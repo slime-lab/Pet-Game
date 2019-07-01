@@ -37,20 +37,9 @@
 
 .questions {
     grid-area: q;
-    /* grid-column: 1 / -1;
-    grid-row: 2 / 3; */
-     /* background-color: transparent; 
-    color: orange; */
     font-size: 25px;
     text-align: center;
-    /* text-align: center; */
 }
-
-/* .exit {
-    grid-area: eg;
-    /* grid-column: 3 / 4;
- background-color: transparent; 
-/* } */
 
 .x {
     grid-area: x;
@@ -67,7 +56,7 @@
     grid-area: b;
     border-radius: 30%;
     color: white;
-    padding: 2px;
+    padding: 3px;
     background-color:orange;
     border: solid white 2px;
     
@@ -76,10 +65,39 @@
     grid-area: b2;
     border-radius: 30%;
     color: white;
-    padding: 2px;
+    padding: 3px;
     background-color:orange;
     border: solid white 2px;
-    
+}
+
+.falsebtn:hover {
+    background-color: white;
+    border: solid orange 3px;
+    color: orange;
+}
+
+.falsebtn:active {
+    background-color: rgba(248, 147, 80, 0.5);
+}
+
+.truebtn:hover {
+    background-color: white;
+    border: solid orange 3px;
+    color: orange;
+}
+
+.truebtn:active {
+    background-color: rgba(248, 147, 80, 0.5);
+}
+
+.x:hover {
+    background-color: white;
+    border: solid orange 3px;
+    color: orange;
+}
+
+.x:active {
+    background-color: rgba(248, 147, 80, 0.5);
 }
 
 /*################### Modal Stuff ###############*/
@@ -125,7 +143,8 @@
     display: grid;
     grid-gap: 2px;
     /* grid-template-columns: repeat(6, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(6, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(6, 1fr)); */
+    grid-template-columns: 75px 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         "a d d d d d"
@@ -140,34 +159,39 @@
 
 .boxOne {
     grid-area: a;
-    background-image: url(images/icons/hand.svg);
+    background-image: url(images/icons/petIcon.png);
     background-size: 50px;
     background-repeat: no-repeat;
     align-content: center;
     background-position: center;
-    /* grid-column: 1 / 2;
-    grid-row: 1 / 2; */
-    /* background-color: palegreen; */
+    padding: 0;
+}
+
+
+.boxOne:active {
+    background-size: 60px;
+    
 }
 
 .boxTwo {
-    /* grid-column: 1 / 2;
-    grid-row: 2 / 3;  */
     grid-area: b;
-    background-image: url(images/icons/hamburger.svg);
+    background-image: url(images/icons/feedButton.png);
     background-size: 50px;
     background-repeat: no-repeat;
     align-content: center;
     background-position: center;
-    
-    /* background-color: palegreen; */
+}
+
+.boxTwo:active {
+    background-size: 60px;
 }
 
 .boxThree {
+    
     /* grid-column: 2 / 3;
     grid-row: 3 / 4; */
     grid-area: c; 
-    background-image: url(images/icons/play.svg);
+    background-image: url(images/icons/playButton.png);
     background-size: 50px;
     background-repeat: no-repeat;
     align-content: center;
@@ -179,13 +203,13 @@
 .boxFour {
     grid-area: d;
     display: grid;
-    grid-gap: 2px;
+    /* grid-gap: 2px; */
     /* grid-template-columns: repeat(6, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "cl sm cld"
-        "p p p"
+        "f p ."
          
 
 }
@@ -196,6 +220,11 @@
     grid-area: cl;
     background-color: transparent;
     justify-content: left;
+
+}
+
+.displayFood {
+    grid-area: f;
 
 }
 
@@ -215,6 +244,12 @@
     
 }
 
+.displayFoodImg {
+    width: 100px;
+    background-position: center;
+    margin: 0 auto;
+}
+
 .displaySunImg {
     width: 100px;
 }
@@ -227,8 +262,8 @@
 }
 
 .displayPetImg {
-    width: 270px;
-    height: 270px;
+    width: 100px;
+    height: 100px;
 }
 
 
@@ -354,9 +389,8 @@
         grid-area: c;
         background-color: palegoldenrod;
         display: grid;
-        grid-gap: 2px;
-        /* grid-template-columns: repeat(6, 1fr); */
-        grid-template-columns: repeat(auto-fit, minmax(6, 1fr));
+        /* grid-gap: 2px; */
+        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
             "a d d d d d"
@@ -368,8 +402,10 @@
     }
 
     .boxOne {
+        
         grid-area: a;
-        background-image: url(images/icons/hand.svg);
+        padding: 0;
+        background-image: url(images/icons/petIcon.png);
         background-size: 75px;
         background-repeat: no-repeat;
         align-content: center;
@@ -382,7 +418,7 @@
         /* grid-column: 1 / 2;
         grid-row: 2 / 3;  */
         grid-area: b;
-        background-image: url(images/icons/hamburger.svg);
+        background-image: url(images/icons/feedButton.png);
         background-size: 75px;
         background-repeat: no-repeat;
         align-content: center;
@@ -394,7 +430,7 @@
         /* grid-column: 2 / 3;
         grid-row: 3 / 4; */
         grid-area: c; 
-        background-image: url(images/icons/play.svg);
+        background-image: url(images/icons/playButton.png);
         background-size: 75px;
         background-repeat: no-repeat;
         align-content: center;
@@ -407,7 +443,11 @@
         /* background-color: palegreen; */
     }
 
-
+    .displayFoodImg {
+        width: 250px;
+        background-position: center;
+        margin: 0 auto;
+    }
     
 .displaySunImg {
     width: 250px;
@@ -419,6 +459,12 @@
 .displayMoonImg {
     width: 250px;
 }
+
+.displayPetImg {
+    width: 270px;
+    height: 270px;
+}
+
     
     .footer {
         grid-area: f;
@@ -429,7 +475,7 @@
 
 } 
 /* adding css for buttons */
-#feedButton{
+/* #feedButton{
     height:200px;
     width:200px;
     margin: 0 auto;
@@ -446,4 +492,4 @@
     width:200px;
     margin: 0 auto;
 
-}
+} */

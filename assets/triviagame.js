@@ -3,7 +3,10 @@ var points = 0;
 //quiz toggle
 var questionAnswered = false;
 // Event listener for our quiz-button
-$(".boxThree").on("click", function () {
+$(".boxThree").on("click", newQuestion());
+
+function newQuestion()
+{
     questionAnswered = false;
     //adding .empty funtion for quiz
     $("#correctAns").empty();
@@ -37,33 +40,34 @@ $(".boxThree").on("click", function () {
                 // $(".quizBox").append(falsebtn);
                 //swap to default pet face function
                 function defaultEmoji() {
-                    $(".pet").attr("src", "images/avatar/newidleAvatar.gif")
+                    $(".displayPetImg").attr("src", "images/avatar/idleAvatar.gif")
                 }
                 //correct faceswap function
                 function correctPetFace() {
                     points++;
                     $(".points").html("Corrent Answers: " + points);
-                    $(".pet").attr("src", "images/avatar/happyAvatar.gif")
+                    $(".displayPetImg").attr("src", "images/avatar/happyAvatar.gif")
                     setTimeout(defaultEmoji, 5000);
+                    setTimeout(newQuestion, 2000);
 
-            }
-            //incorrect faceswap function
-            function incorrectPetFace() {
-                $(".pet").attr("src", "images/avatar/xAvatar.gif")
-                setTimeout(defaultEmoji, 5000);
-            }
-            //answer click function
-            truebtn.on("click", function (event) {
-                //changing alert to text
-                var x = "True";
-                console.log(questionAnswered)
-                if (questionAnswered == false) {
-                    questionAnswered = true;
-                    if (x == correct) {
-                        console.log(x)
-                        $("#correctAns").text("hey you got it!");
-                        correctPetFace();
-                        //happy ++
+                }
+                //incorrect faceswap function
+                function incorrectPetFace() {
+                    $(".displayPetImg").attr("src", "images/avatar/xAvatar.gif")
+                    setTimeout(defaultEmoji, 5000);
+                    setTimeout(newQuestion, 2000);
+                }
+                //answer click function
+                truebtn.on("click", function (event) {
+                    //changing alert to text
+                    var x = "True";
+                    console.log(questionAnswered)
+                    if (questionAnswered == false) {
+                        questionAnswered = true;
+                        if (x == correct) {
+                            console.log(x)
+                            $("#correctAns").text("hey you got it!");
+                            correctPetFace();
 
                     } else {
                         $("#correctAns").text("sorry the correct answer is:" + correct);
@@ -91,4 +95,4 @@ $(".boxThree").on("click", function () {
             });
 
         });
-});
+};
