@@ -40,7 +40,7 @@ function newQuestion()
                 // $(".quizBox").append(falsebtn);
                 //swap to default pet face function
                 function defaultEmoji() {
-                    $(".displayPetImg").attr("src", "images/avatar/newidleAvatar.gif")
+                    $(".displayPetImg").attr("src", "images/avatar/idleAvatar.gif")
                 }
                 //correct faceswap function
                 function correctPetFace() {
