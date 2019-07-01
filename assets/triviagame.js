@@ -3,7 +3,7 @@ var points = 0;
 //quiz toggle
 var questionAnswered = false;
 // Event listener for our quiz-button
-$("#quiz-button").on("click", function () {
+$(".boxThree").on("click", function () {
     questionAnswered = false;
     //adding .empty funtion for quiz
     $("#correctAns").empty();
@@ -25,14 +25,16 @@ $("#quiz-button").on("click", function () {
                 console.log(correct);
                 console.log(incorrect);
 
-                $("#body").html(questionUrl)
-                var quizquestion = $("<div>");
-                var truebtn = $("<button>").text("True");
-                var falsebtn = $("<button>").text("False");
-                //changing gifs and images
-                $("#body").append("<br><br>");
-                $("#body").append(truebtn);
-                $("#body").append(falsebtn);
+                $(".questions").html(questionUrl)
+                // var quizquestion = $("<div>");
+                // var truebtn = $("<button>").text("True");
+                // var falsebtn = $("<button>").text("False");
+                var truebtn = $(".truebtn");
+                var falsebtn = $(".falsebtn");
+
+                // $(".quizBox").append("<br><br>");
+                // $(".quizBox").append(truebtn);
+                // $(".quizBox").append(falsebtn);
                 //swap to default pet face function
                 function defaultEmoji() {
                     $(".pet").attr("src", "images/avatar/newidleAvatar.gif")
