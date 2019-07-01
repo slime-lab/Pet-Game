@@ -67,7 +67,7 @@
     grid-area: b;
     border-radius: 30%;
     color: white;
-    padding: 2px;
+    padding: 3px;
     background-color:orange;
     border: solid white 2px;
     
@@ -76,10 +76,39 @@
     grid-area: b2;
     border-radius: 30%;
     color: white;
-    padding: 2px;
+    padding: 3px;
     background-color:orange;
     border: solid white 2px;
-    
+}
+
+.falsebtn:hover {
+    background-color: white;
+    border: solid orange 3px;
+    color: orange;
+}
+
+.falsebtn:active {
+    background-color: rgba(248, 147, 80, 0.5);
+}
+
+.truebtn:hover {
+    background-color: white;
+    border: solid orange 3px;
+    color: orange;
+}
+
+.truebtn:active {
+    background-color: rgba(248, 147, 80, 0.5);
+}
+
+.x:hover {
+    background-color: white;
+    border: solid orange 3px;
+    color: orange;
+}
+
+.x:active {
+    background-color: rgba(248, 147, 80, 0.5);
 }
 
 /*################### Modal Stuff ###############*/
@@ -145,22 +174,25 @@
     background-repeat: no-repeat;
     align-content: center;
     background-position: center;
-    /* grid-column: 1 / 2;
-    grid-row: 1 / 2; */
-    /* background-color: palegreen; */
+}
+
+
+.boxOne:active {
+    background-size: 60px;
+    
 }
 
 .boxTwo {
-    /* grid-column: 1 / 2;
-    grid-row: 2 / 3;  */
     grid-area: b;
     background-image: url(images/icons/hamburger.svg);
     background-size: 50px;
     background-repeat: no-repeat;
     align-content: center;
     background-position: center;
-    
-    /* background-color: palegreen; */
+}
+
+.boxTwo:active {
+    background-size: 60px;
 }
 
 .boxThree {
@@ -227,8 +259,8 @@
 }
 
 .displayPetImg {
-    width: 270px;
-    height: 270px;
+    width: 100px;
+    height: 100px;
 }
 
 
@@ -419,6 +451,12 @@
 .displayMoonImg {
     width: 250px;
 }
+
+.displayPetImg {
+    width: 270px;
+    height: 270px;
+}
+
     
     .footer {
         grid-area: f;

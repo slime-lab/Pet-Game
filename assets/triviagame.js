@@ -37,19 +37,19 @@ $(".boxThree").on("click", function () {
                 // $(".quizBox").append(falsebtn);
                 //swap to default pet face function
                 function defaultEmoji() {
-                    $(".pet").attr("src", "images/avatar/newidleAvatar.gif")
+                    $(".displayPetImg").attr("src", "images/avatar/newidleAvatar.gif")
                 }
                 //correct faceswap function
                 function correctPetFace() {
                     points++;
                     $(".points").html("Corrent Answers: " + points);
-                    $(".pet").attr("src", "images/avatar/happyAvatar.gif")
+                    $(".displayPetImg").attr("src", "images/avatar/happyAvatar.gif")
                     setTimeout(defaultEmoji, 5000);
 
                 }
                 //incorrect faceswap function
                 function incorrectPetFace() {
-                    $(".pet").attr("src", "images/avatar/xAvatar.gif")
+                    $(".displayPetImg").attr("src", "images/avatar/xAvatar.gif")
                     setTimeout(defaultEmoji, 5000);
                 }
                 //answer click function
