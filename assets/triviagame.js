@@ -3,7 +3,10 @@ var points = 0;
 //quiz toggle
 var questionAnswered = false;
 // Event listener for our quiz-button
-$(".boxThree").on("click", function () {
+$(".boxThree").on("click", newQuestion());
+
+function newQuestion()
+{
     questionAnswered = false;
     //adding .empty funtion for quiz
     $("#correctAns").empty();
@@ -45,12 +48,14 @@ $(".boxThree").on("click", function () {
                     $(".points").html("Corrent Answers: " + points);
                     $(".displayPetImg").attr("src", "images/avatar/happyAvatar.gif")
                     setTimeout(defaultEmoji, 5000);
+                    setTimeout(newQuestion, 2000);
 
                 }
                 //incorrect faceswap function
                 function incorrectPetFace() {
                     $(".displayPetImg").attr("src", "images/avatar/xAvatar.gif")
                     setTimeout(defaultEmoji, 5000);
+                    setTimeout(newQuestion, 2000);
                 }
                 //answer click function
                 truebtn.on("click", function (event) {
@@ -90,4 +95,4 @@ $(".boxThree").on("click", function () {
                 });
             };
         });
-});
+};
