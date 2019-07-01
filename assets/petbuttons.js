@@ -20,10 +20,12 @@ $(".boxOne").click(function (happyPet) {
 //if button is clicked then default image change into happy image
 //after 4 hours with no click, change image back to default
 $(".boxTwo").click(function (hungryPet) {
+    var foods = ["images/food/apple.png", "images/food/icecream.png" , "images/food/meat.png"];
+var randfoods = foods[Math.floor(Math.random() * foods.length)];
     $(".petCurrentMood").html("Pet is full!")
-    $(".displayFoodImg").attr("src", "images/food/apple.png");
+    $(".displayFoodImg").attr("src", randfoods);
     setTimeout(defaultFood, 2000);
-    $(".displayPetImg").attr("src", "images/avatar/happyAvatar.gif");
+    $(".displayPetImg").attr("src", "images/avatar/fullAvatar.gif");
     setTimeout(defaultMood, 5000);
 
 });
