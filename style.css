@@ -37,20 +37,9 @@
 
 .questions {
     grid-area: q;
-    /* grid-column: 1 / -1;
-    grid-row: 2 / 3; */
-     /* background-color: transparent; 
-    color: orange; */
     font-size: 25px;
     text-align: center;
-    /* text-align: center; */
 }
-
-/* .exit {
-    grid-area: eg;
-    /* grid-column: 3 / 4;
- background-color: transparent; 
-/* } */
 
 .x {
     grid-area: x;
@@ -152,9 +141,10 @@
     /* grid-column: 1 / -1; */
     background-color: palegoldenrod;
     display: grid;
-    grid-gap: 2px;
+    /* grid-gap: 2px; */
     /* grid-template-columns: repeat(6, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(6, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(6, 1fr)); */
+    grid-template-columns: 75px 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         "a d d d d d"
@@ -196,6 +186,7 @@
 }
 
 .boxThree {
+    
     /* grid-column: 2 / 3;
     grid-row: 3 / 4; */
     grid-area: c; 
@@ -211,13 +202,13 @@
 .boxFour {
     grid-area: d;
     display: grid;
-    grid-gap: 2px;
+    /* grid-gap: 2px; */
     /* grid-template-columns: repeat(6, 1fr); */
     grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "cl sm cld"
-        "f p p"
+        "f p ."
          
 
 }
@@ -253,7 +244,9 @@
 }
 
 .displayFoodImg {
-    width: 150px;
+    width: 100px;
+    background-position: center;
+    margin: 0 auto;
 }
 
 .displaySunImg {
@@ -395,7 +388,7 @@
         grid-area: c;
         background-color: palegoldenrod;
         display: grid;
-        grid-gap: 2px;
+        /* grid-gap: 2px; */
         /* grid-template-columns: repeat(6, 1fr); */
         grid-template-columns: repeat(auto-fit, minmax(6, 1fr));
         grid-template-rows: 1fr 1fr 1fr;
@@ -409,6 +402,7 @@
     }
 
     .boxOne {
+        
         grid-area: a;
         background-image: url(images/icons/hand.svg);
         background-size: 75px;
@@ -448,7 +442,11 @@
         /* background-color: palegreen; */
     }
 
-
+    .displayFoodImg {
+        width: 250px;
+        background-position: center;
+        margin: 0 auto;
+    }
     
 .displaySunImg {
     width: 250px;
