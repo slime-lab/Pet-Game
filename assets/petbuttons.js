@@ -21,24 +21,3 @@ $(".boxTwo").click(function (hungryPet) {
     setTimeout(defaultMood, 5000);
 
 });
-
-//if button hasnt been clicked for set number of hours, avatar becomes upset
-var isClicked = $('.boxOne').data('clicked');
-if (isClicked != 'yes') {
-    $(".displayPetImg").attr("src", "images/avatar/upsetAvatar.gif");
-} else (defaultMood);
-
-//detect if buttons are clicked
-$('.boxOne').on('click', function () {
-    $(this).data('clicked', 'yes');
-    console.log("i clicked it!");
-});
-
-$('.boxTwo').on('click', function () {
-    $(this).data('clicked', 'yes');
-    console.log("i clicked it!");
-
-});
-
-
-
