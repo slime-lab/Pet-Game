@@ -135,8 +135,9 @@
 
 .box{
     background-color: rgba(0, 0, 0, 0.5);
-    
+
 }
+
 .boxOne {
     grid-area: a;
     background-image: url(images/icons/hand.svg);
@@ -201,7 +202,7 @@
 .displayClouds {
     grid-area: sm;
     background-color: transparent;
-}
+}s
 
 .displayMoon {
     grid-area: cld;
@@ -211,8 +212,8 @@
 .displayPet {
     grid-area: p;
     background-color: transparent;
+    
 }
-
 
 .displaySunImg {
     width: 100px;
@@ -223,6 +224,11 @@
 }
 .displayMoonImg {
     width: 100px;
+}
+
+.displayPetImg {
+    width: 270px;
+    height: 270px;
 }
 
 
