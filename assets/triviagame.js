@@ -20,13 +20,13 @@ function newQuestion()
     })
         .then(function (response) {       // After the data from the AJAX request comes back
             // for loop through the questions
-            // console.log(response)
-            for (var i = 0; i < response.results.length; i++) {
-                var questionUrl = response.results[i].question;
-                var correct = response.results[i].correct_answer;
-                var incorrect = response.results[i].incorrect_answers;
-                console.log(correct);
-                console.log(incorrect);
+            console.log(response)
+            //removing for loop for correct function
+            var questionUrl = response.results[0].question;
+            var correct = response.results[0].correct_answer;
+            var incorrect = response.results[0].incorrect_answers;
+            console.log(correct);
+            console.log(incorrect);
 
                 $(".questions").html(questionUrl)
                 // var quizquestion = $("<div>");
@@ -50,49 +50,32 @@ function newQuestion()
                     setTimeout(defaultEmoji, 5000);
                     setTimeout(newQuestion, 2000);
 
-                }
-                //incorrect faceswap function
-                function incorrectPetFace() {
-                    $(".displayPetImg").attr("src", "images/avatar/xAvatar.gif")
-                    setTimeout(defaultEmoji, 5000);
-                    setTimeout(newQuestion, 2000);
-                }
                 //answer click function
-                truebtn.on("click", function (event) {
-                    //changing alert to text
-                    var x = "True";
-                    console.log(questionAnswered)
-                    if (questionAnswered == false) {
-                        questionAnswered = true;
-                        if (x == correct) {
-                            console.log(x)
-                            $("#correctAns").text("hey you got it!");
-                            correctPetFace();
 
-                        } else {
-                            $("#correctAns").text("sorry the correct answer is:" + correct);
-                            incorrectPetFace();
-                        }
+                    } else {
+                        $("#correctAns").text("sorry the correct answer is:" + correct);
+                        incorrectPetFace();
                     }
-                });
-                //changing alert to text
-                falsebtn.on("click", function (event) {
-                    if (questionAnswered == false) {
+                }
+            });
+            //changing alert to text
+            falsebtn.on("click", function (event) {
+                if (questionAnswered == false) {
 
-                        questionAnswered = true;
-                        var y = "False";
-                        if (y == correct) {
-                            console.log(questionAnswered)
-                            $("#correctAns").text("hey you got it!");
-                            correctPetFace();
+                    questionAnswered = true;
+                    var y = "False";
+                    if (y == correct) {
+                        console.log(questionAnswered)
+                        $("#correctAns").text("hey you got it!");
+                        correctPetFace();
 
-                        } else {
-                            $("#correctAns").text("sorry the correct answer is:" + correct);
-                            incorrectPetFace();
-                        }
+                    } else {
+                        $("#correctAns").text("sorry the correct answer is:" + correct);
+                        incorrectPetFace();
                     }
+                }
 
-                });
-            };
+            });
+
         });
 };
