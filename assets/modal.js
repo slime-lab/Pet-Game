@@ -12,4 +12,9 @@ function modal() {
     play.show()
 }
 
+$(".x").on("click", close);
+function close(){
+    play.hide();
+}
+
 };
