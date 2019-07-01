@@ -389,8 +389,7 @@
         background-color: palegoldenrod;
         display: grid;
         /* grid-gap: 2px; */
-        /* grid-template-columns: repeat(6, 1fr); */
-        grid-template-columns: repeat(auto-fit, minmax(6, 1fr));
+        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
             "a d d d d d"
