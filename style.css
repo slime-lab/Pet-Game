@@ -141,7 +141,7 @@
     /* grid-column: 1 / -1; */
     background-color: palegoldenrod;
     display: grid;
-    /* grid-gap: 2px; */
+    grid-gap: 2px;
     /* grid-template-columns: repeat(6, 1fr); */
     /* grid-template-columns: repeat(auto-fit, minmax(6, 1fr)); */
     grid-template-columns: 75px 1fr 1fr 1fr 1fr 1fr;
@@ -205,7 +205,7 @@
     display: grid;
     /* grid-gap: 2px; */
     /* grid-template-columns: repeat(6, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "cl sm cld"
@@ -405,6 +405,7 @@
     .boxOne {
         
         grid-area: a;
+        padding: 0;
         background-image: url(images/icons/hand.svg);
         background-size: 75px;
         background-repeat: no-repeat;
