@@ -50,7 +50,24 @@ function newQuestion()
                     setTimeout(defaultEmoji, 5000);
                     setTimeout(newQuestion, 2000);
 
+                }
+                //incorrect faceswap function
+                function incorrectPetFace() {
+                    $(".displayPetImg").attr("src", "images/avatar/xAvatar.gif")
+                    setTimeout(defaultEmoji, 5000);
+                    setTimeout(newQuestion, 2000);
+                }
                 //answer click function
+                truebtn.on("click", function (event) {
+                    //changing alert to text
+                    var x = "True";
+                    console.log(questionAnswered)
+                    if (questionAnswered == false) {
+                        questionAnswered = true;
+                        if (x == correct) {
+                            console.log(x)
+                            $("#correctAns").text("hey you got it!");
+                            correctPetFace();
 
                     } else {
                         $("#correctAns").text("sorry the correct answer is:" + correct);
