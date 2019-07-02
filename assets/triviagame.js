@@ -55,7 +55,7 @@ function newQuestion() {
             }
             //incorrect faceswap function
             function incorrectPetFace() {
-                $(".displayPetImg").attr("src", "images/avatar/xAvatar.gif")
+                $(".displayPetImg").attr("src", "images/avatar/upsetAvatar.gif")
                 setTimeout(defaultEmoji, 2000);
                 questionTimer = setTimeout(newQuestion, 2000);
 
