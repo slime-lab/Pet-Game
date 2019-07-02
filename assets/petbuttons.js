@@ -1,12 +1,21 @@
 //ask user for pet name and save to local storage
+var petName = [];
+petName [0] = prompt('Give your pet a name: ');
+localStorage.setItem("petName", JSON.stringify(petName));
+var storedNames = JSON.parse(localStorage.getItem("petName"));
 
-var petName = localStorage.getItem(petName);
-if (!petName) {
-    petName = prompt('Give your pet a name: ')
-    localStorage.setItem(petName, "petname");
-    console.log(petName);
+// if (!petName) {
+//     petName = 
+//     localStorage.setItem(petName, "petname");
+//     console.log(petName);
 
-};
+// var petName = localStorage.getItem(petName);
+// if (!petName) {
+//     petName = prompt('Give your pet a name: ')
+//     localStorage.setItem(petName, "petname");
+//     console.log(petName);
+
+// };
 
 //pet button clicked --
 //if button is clicked then default image change into happy image
