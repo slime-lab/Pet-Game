@@ -11,6 +11,8 @@ console.log( currentTime-localStorage.feedtimeUnix)
 function checkHungry(){
     if (currentTime -localStorage.feedtimeUnix >7200 ){
     $(".petCurrentMood").text("Pet is Hungry");
+    $(".displayPetImg").attr("src", "images/avatar/xAvatar.gif");
+
     console.log("test")
 }}
 setInterval(checkHungry,2000)
