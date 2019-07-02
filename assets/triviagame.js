@@ -68,11 +68,11 @@ function newQuestion() {
 
                     questionAnswered = true;
                     if (x == correct) {
-                        $("#correctAns").text("hey you got it!");
+                        $(".petCurrentMood").html("Hey, you got it!");
                         correctPetFace();
 
                     } else {
-                        $("#correctAns").text("sorry the correct answer is:" + correct);
+                        $(".petCurrentMood").html("Sorry, the correct answer is:" + correct);
                         incorrectPetFace();
 
                     }
@@ -85,11 +85,11 @@ function newQuestion() {
                     questionAnswered = true;
                     var y = "False";
                     if (y == correct) {
-                        $("#correctAns").text("hey you got it!");
+                        $(".petCurrentMood").html("Hey, you got it!");
                         correctPetFace();
 
                     } else {
-                        $("#correctAns").text("sorry the correct answer is:" + correct);
+                        $(".petCurrentMood").html("Sorry, the correct answer is:" + correct);
                         incorrectPetFace();
                     }
                 }
