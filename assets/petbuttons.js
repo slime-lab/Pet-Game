@@ -25,7 +25,7 @@ function defaultFood() {
 }
 
 $(".boxOne").click(function (happyPet) {
-    $(".petCurrentMood").html("Pet is happy!")
+    $(".header").html("Pet is happy!")
     $(".displayPetImg").attr("src", "images/avatar/happyAvatar.gif");
     setTimeout(defaultMood, 5000);
 
@@ -37,7 +37,7 @@ $(".boxOne").click(function (happyPet) {
 $(".boxTwo").click(function (hungryPet) {
     var foods = ["images/food/apple.png", "images/food/icecream.png", "images/food/meat.png"];
     var randfoods = foods[Math.floor(Math.random() * foods.length)];
-    $(".petCurrentMood").html("Pet is full!")
+    $(".header").html("Pet is full!")
     $(".displayFoodImg").attr("src", randfoods);
     setTimeout(defaultFood, 2000);
     $(".displayPetImg").attr("src", "images/avatar/fullAvatar.gif");
