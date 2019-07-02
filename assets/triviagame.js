@@ -72,7 +72,7 @@ function newQuestion() {
                         correctPetFace();
 
                     } else {
-                        $(".header").html("Sorry, the correct answer is:" + correct);
+                        $(".header").html("Sorry, the correct answer is " + correct);
                         incorrectPetFace();
 
                     }
