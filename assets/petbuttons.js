@@ -19,7 +19,9 @@ $(".footer").html(petName + " was last fed at " + localStorage.feedtime)
 console.log( currentTime-localStorage.feedtimeUnix)
 function checkHungry(){
     if (currentTime -localStorage.feedtimeUnix >7200 ){
-    $(".petCurrentMood").text(petName + " is Hungry");
+    $(".header").text(petName +" is Hungry");
+    $(".displayPetImg").attr("src", "images/avatar/xAvatar.gif");
+
     console.log("test")
 }}
 setInterval(checkHungry,2000)
@@ -34,7 +36,7 @@ function defaultFood() {
 }
 
 $(".boxOne").click(function (happyPet) {
-    $(".petCurrentMood").html(petName + " is happy!")
+    $(".header").html(petName + " is happy!")
     $(".displayPetImg").attr("src", "images/avatar/happyAvatar.gif");
     setTimeout(defaultMood, 5000);
 
@@ -46,7 +48,7 @@ $(".boxOne").click(function (happyPet) {
 $(".boxTwo").click(function (hungryPet) {
     var foods = ["images/food/apple.png", "images/food/icecream.png", "images/food/meat.png"];
     var randfoods = foods[Math.floor(Math.random() * foods.length)];
-    $(".petCurrentMood").html(petName + " is full!")
+    $(".header").html(petName + " is full!")
     $(".displayFoodImg").attr("src", randfoods);
     setTimeout(defaultFood, 2000);
     $(".displayPetImg").attr("src", "images/avatar/fullAvatar.gif");

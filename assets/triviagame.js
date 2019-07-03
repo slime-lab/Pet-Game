@@ -55,7 +55,7 @@ function newQuestion() {
             }
             //incorrect faceswap function
             function incorrectPetFace() {
-                $(".displayPetImg").attr("src", "images/avatar/xAvatar.gif")
+                $(".displayPetImg").attr("src", "images/avatar/upsetAvatar.gif")
                 setTimeout(defaultEmoji, 2000);
                 questionTimer = setTimeout(newQuestion, 2000);
 
@@ -68,11 +68,11 @@ function newQuestion() {
 
                     questionAnswered = true;
                     if (x == correct) {
-                        $(".petCurrentMood").html("Hey, you got it!");
+                        $(".header").html("Hey, you got it!");
                         correctPetFace();
 
                     } else {
-                        $(".petCurrentMood").html("Sorry, the correct answer is:" + correct);
+                        $(".header").html("Sorry, the correct answer is " + correct);
                         incorrectPetFace();
 
                     }
@@ -85,11 +85,11 @@ function newQuestion() {
                     questionAnswered = true;
                     var y = "False";
                     if (y == correct) {
-                        $(".petCurrentMood").html("Hey, you got it!");
+                        $(".header").html("Hey, you got it!");
                         correctPetFace();
 
                     } else {
-                        $(".petCurrentMood").html("Sorry, the correct answer is " + correct);
+                        $(".header").html("Sorry, the correct answer is " + correct);
                         incorrectPetFace();
                     }
                 }
