@@ -15,7 +15,9 @@ function timeNow (){
     currentTime = moment().format("X");
 }
 console.log(localStorage.feedtime);
+if(localStorage.feedtime != null){
 $(".footer").html(petName + " was last fed at " + localStorage.feedtime)
+}
 console.log( currentTime-localStorage.feedtimeUnix)
 function checkHungry(){
     if (currentTime -localStorage.feedtimeUnix >7200 ){
@@ -24,8 +26,18 @@ function checkHungry(){
 
     console.log("test")
 }}
+function checkAttention(){
+    if (currentTime -localStorage.attentiontimeUnix >15 ){
+    $(".header").text(petName +" wants attention!");
+    $(".displayPetImg").attr("src", "images/avatar/upsetAvatar.gif");
+
+    console.log("test")
+}}
+
 setInterval(checkHungry,2000)
+setInterval(checkAttention,2000)
 setInterval(timeNow,1000)
+
 
 function defaultMood() {
     $(".displayPetImg").attr("src", "images/avatar/idleAvatar.gif");
@@ -39,6 +51,7 @@ $(".boxOne").click(function (happyPet) {
     $(".header").html(petName + " is happy!")
     $(".displayPetImg").attr("src", "images/avatar/happyAvatar.gif");
     setTimeout(defaultMood, 5000);
+    localStorage.attentiontimeUnix = currentTime;
 
 });
 
