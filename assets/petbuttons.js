@@ -27,7 +27,7 @@ function checkHungry(){
     console.log("test")
 }}
 function checkAttention(){
-    if (currentTime -localStorage.attentiontimeUnix >15 ){
+    if (currentTime -localStorage.attentiontimeUnix >1800 ){
     $(".header").text(petName +" wants attention!");
     $(".displayPetImg").attr("src", "images/avatar/upsetAvatar.gif");
 
