@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Your Pet Slime</title>
+</head>
+
+
+<body>
+    <!-- ################ Modal stuff ##################### -->
+
+    <div class="modal">
+        <div class="quizBox">
+            <div class="x">X</div>
+            <div class="questions"></div>
+            <hr>
+            <div class="truebtn">True</div>
+            <div class="falsebtn">False</div>
+        </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <!-- header -->
+            <div class="">Your Pet Slime</div>
+            <!-- end of header -->
+        </div>
+        <!-- overall body -->
+        <div class="content">
+            <!-- menu -->
+            <!-- pet -->
+            <!-- added ids to buttons and changed place holders -->
+            <div class="boxOne box"></div>
+            <!-- feed -->
+            <div class="boxTwo box"></div>
+            <!-- game -->
+            <div class="boxThree box"></div>
+            <!-- display and pet area -->
+            <div class="boxFour box">
+                <div class="displaySun"><img class="displaySunImg"></div>
+                <div class="displayClouds"><img class="displayCloudsImg"></div>
+                <div class="displayMoon"><img class="displayMoonImg"></div>
+                <div class="displayFood"><img class="displayFoodImg"></div>
+                <div class="displayPet"><img class="displayPetImg" src="images/avatar/idleAvatar.gif">
+                    <p class="petMood"><label></label> <span class="petCurrentMood"></span></p>
+                </div>
+
+            </div>
+        </div>
+        <!-- end of body -->
+
+        <!-- footer -->
+        <div class="footer"></div>
+        <!-- end of footer -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+        <script src="assets/weather.js"></script>
+        <script src="assets/triviagame.js"></script>
+        <script src="assets/modal.js"></script>
+        <script src="assets/petbuttons.js"></script>
+        <script type="text/javascript">
+            weather();
+            setInterval(weather(), 1000 * 60 * 60);
+            test();
+            // This is our API key. Add your own API key between the ""
+        </script>
+    </div>
+
+</body>
+
+</html>
